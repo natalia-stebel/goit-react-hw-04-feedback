@@ -6,46 +6,43 @@ export class App extends Component {
     good: 0,
     neutral: 0,
     bad: 0,
-  };
+  };}
 
   
-getTotalFeedback=()=>{
+ handleClick = key => {
+  this.setState(prevState =>{
+    return{
+      [key]: prevState[key] + 1,
+    }
+  }
 
-  return Object.values(this.state).reduce((total,item)=>total+item,0);
-}
+  )
+ };
 
-handleIncrement  = event => {
-  const { name } = event.target;
-  this.setState(prevState => {
-    return { [name]: prevState[name] + 1 };
-  });
-};
-
- 
   render() {
     const { good, neutral, bad } = this.state;
-    
-    return (
-      < div className="FeedbackCounter">
-          <p>Please leave feedback</p>
+    const total = Object.values(this.state).reduce((total,item)=>total+item,0);
+    const PositiveFeedbackPercentage= Math.round((this.state.good / this.countTotalFeedback()) * 100);
+     
+      return (
+          <div className="Counter">
+              <p>Please leave feedback</p>
+                   {Object.keys(this.state).map(key =>(<button 
+                   key={key} 
+                   onClick={()=>this.handleClick(key)}>
+                    {key}
+                    </button>))}
 
-          <div className="FeadbackButtons">
-            <button type="button" key={id} name={button} onClick={()=>handleIncrement(id)}>Good</button>
-            <button type="button"  name={button} onClick={this.handleIncrement}>Neutral</button>
-            <button type="button"  name={button} onClick={this.handleIncrement}>Bad</button>
+                <div>
+                  <p>Good:{good}</p>
+                  <p>Neutral:{neutral}</p>
+                  <p>Bad:{bad}</p>
+                  <p>Total:{total}</p>
+                  <p>Positive feedback:{PositiveFeedbackPercentage}%</p>
+
+                </div>
           </div>
-              
-              <div className="Statistics">
-              <p>Statistics</p>
-                <span className="Statistics__item">Good:{good}</span>
-                <span className="Statistics__item">Neutral:{neutral}</span>
-                <span className="Statistics__item">Bad:{bad}</span>
-
-              </div>
-
-      </div>
-
-    )
+           
+      )
   }
-}
 
