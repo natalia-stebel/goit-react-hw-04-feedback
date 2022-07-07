@@ -17,7 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:js": "eslint src/**/*.{js,jsx}"
+    "lint:js": "eslint src/**/*.{js,jsx}",
+    "build:max": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build --prod"
   },
   "eslintConfig": {
     "extends": [
