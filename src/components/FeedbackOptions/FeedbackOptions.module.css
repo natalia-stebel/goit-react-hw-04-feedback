@@ -1,0 +1,24 @@
+.button{
+
+text-transform: capitalize;
+padding: 5px;
+background-color: rgba(190, 8, 8, 0.37);
+border-color: rgba(165, 42, 42, 0.096);
+width: auto;
+border-radius: 5px ;
+
+color: antiquewhite;
+font-weight: 700;
+font-size: 18px;
+
+}
+
+.button:not(:last-child) {
+    margin-right: 10px;
+
+}
+
+.button:hover {
+    background-color: brown;
+    box-shadow: 5px 5px 5px brown; 
+}

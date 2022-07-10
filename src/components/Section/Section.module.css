@@ -1,0 +1,13 @@
+.sectionContainer{
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   margin-left: 30px;
+
+}
+
+.title{
+    color: brown;
+    
+}

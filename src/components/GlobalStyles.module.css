@@ -1,0 +1,17 @@
+.container{
+height: auto;
+width: 320px;
+border: 1px solid rgb(204,101,12);
+margin: 0 auto;
+margin-top: 80px;
+padding: 10px;
+box-shadow: 12px 12px 2px 1px rgba(146, 61, 12, 0.658);
+background: rgb(204,101,12);
+background: linear-gradient(90deg, rgba(204,101,12,0.18531162464985995) 11%, rgba(5,1,18,0.00043767507002800965) 96%);
+
+}
+
+body{
+background: rgb(204,101,12);
+background: linear-gradient(90deg, rgba(204,101,12,0.36458333333333337) 15%, rgba(5,1,18,0.00043767507002800965) 96%);
+}

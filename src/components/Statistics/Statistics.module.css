@@ -1,0 +1,14 @@
+.statist{
+    display: block;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+p{
+  text-align: left; 
+  font-weight: 600; 
+}
+
+.feedback{
+    font-size: 18px;
+}

@@ -1,8 +1,12 @@
 import { Component } from 'react';
+
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Section  from './Section/Section';
 import Statistics from './Statistics/Statistics';
 import Notification from './Notification/Notification';
+
+import css from "./GlobalStyles.module.css"
+
 
 export class App extends Component {
   state = {
@@ -34,8 +38,10 @@ positiveFeedbackPercentage() {
     
       return (
         <>
+        <div className={css.container}>
           <Section title="Please leave feedback">
              <FeedbackOptions
+             
                    options={Object.keys(this.state)}
                    onLeaveFeedback={this.onLeaveFeedback}
                    />
@@ -55,7 +61,7 @@ positiveFeedbackPercentage() {
           )}
 
                 </Section>
-          
+          </div>
          </>  
       );
   }
